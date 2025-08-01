@@ -61,42 +61,43 @@ function App() {
               Copy
             </button>
           </div>
-          <div className="flex items-center justify-evenly mb-4">
+          <div className="flex items-center justify-evenly mb-4 gap-4">
             <input
               type="range"
               max={20}
               min={8}
               value={length}
               onChange={(e) => setLength(e.target.value)}
-              className="cursor-pointer bg-purple-600"
+              className=" h-2 bg-purple-700 rounded-lg appearance-none cursor-pointer slider-thumb"
             />
-            <label htmlFor="Length" className=" text-white ">
-              Length:{length}
+            <label htmlFor="Length" className="text-white font-medium">
+              Length: {length}
             </label>
           </div>
 
-          <div className="flex items-center justify-evenly mb-4">
-            <div>
+          <div className="flex items-center justify-evenly mb-4 gap-8">
+            <div className="flex items-center gap-2">
               <input
                 type="checkbox"
                 id="numberAllowed"
-                value={numberAllowed}
-                className="cursor-pointer"
-                onChange={(e) => setNumberAllowed((prev) => !prev)}
+                checked={numberAllowed}
+                onChange={() => setNumberAllowed((prev) => !prev)}
+                className="w-5 h-5 text-purple-600 rounded focus:ring-2 focus:ring-purple-500"
               />
-              <label htmlFor="numberAllowed" className="text-white">
+              <label htmlFor="numberAllowed" className="text-white font-medium">
                 Numbers
               </label>
             </div>
-            <div>
+
+            <div className="flex items-center gap-2">
               <input
                 type="checkbox"
                 id="symbolAllowed"
-                value={symbolAllowed}
-                className="cursor-pointer bg-purple-600 text-purple-600"
-                onChange={(e) => setSymbolAllowed((prev) => !prev)}
+                checked={symbolAllowed}
+                onChange={() => setSymbolAllowed((prev) => !prev)}
+                className="w-5 h-5 text-purple-600 bg-gray-800 border-gray-600 rounded focus:ring-2 focus:ring-purple-500"
               />
-              <label htmlFor="numberAllowed" className="text-white">
+              <label htmlFor="symbolAllowed" className="text-white font-medium">
                 Symbols
               </label>
             </div>
