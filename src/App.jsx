@@ -33,9 +33,9 @@ function App() {
   }, [password]);
   return (
     <>
-      <div className="flex items-center justify-center min-h-screen bg-gray-900">
-        <div className="bg-gray-500 p-8 rounded-lg shadow-md w-full max-w-md">
-          <h1 className="text-2xl text-purple-600 shadow-black font-bold mb-6 text-center">
+      <div className="flex items-center justify-center min-h-screen bg-purple-700">
+        <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md">
+          <h1 className="text-2xl font-bold text-white mb-6 text-center">
             Password Generator
           </h1>
           <div className="mb-4">
@@ -61,7 +61,7 @@ function App() {
               Copy
             </button>
           </div>
-          <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center justify-evenly mb-4">
             <input
               type="range"
               max={20}
@@ -73,28 +73,33 @@ function App() {
             <label htmlFor="Length" className=" text-white ">
               Length:{length}
             </label>
+          </div>
 
-            <input
-              type="checkbox"
-              id="numberAllowed"
-              value={numberAllowed}
-              className="cursor-pointer bg-purple-600 text-purple-600"
-              onChange={(e) => setNumberAllowed((prev) => !prev)}
-            />
-            <label htmlFor="numberAllowed" className="text-white">
-              Numbers
-            </label>
-
-            <input
-              type="checkbox"
-              id="symbolAllowed"
-              value={symbolAllowed}
-              className="cursor-pointer bg-purple-600 text-purple-600"
-              onChange={(e) => setSymbolAllowed((prev) => !prev)}
-            />
-            <label htmlFor="numberAllowed" className="text-white">
-              Symbols
-            </label>
+          <div className="flex items-center justify-evenly mb-4">
+            <div>
+              <input
+                type="checkbox"
+                id="numberAllowed"
+                value={numberAllowed}
+                className="cursor-pointer"
+                onChange={(e) => setNumberAllowed((prev) => !prev)}
+              />
+              <label htmlFor="numberAllowed" className="text-white">
+                Numbers
+              </label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="symbolAllowed"
+                value={symbolAllowed}
+                className="cursor-pointer bg-purple-600 text-purple-600"
+                onChange={(e) => setSymbolAllowed((prev) => !prev)}
+              />
+              <label htmlFor="numberAllowed" className="text-white">
+                Symbols
+              </label>
+            </div>
           </div>
         </div>
       </div>
