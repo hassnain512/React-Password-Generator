@@ -68,7 +68,7 @@ function App() {
               min={8}
               value={length}
               onChange={(e) => setLength(e.target.value)}
-              className="cursor-pointer"
+              className="cursor-pointer bg-purple-600"
             />
             <label htmlFor="Length" className=" text-white ">
               Length:{length}
@@ -78,7 +78,7 @@ function App() {
               type="checkbox"
               id="numberAllowed"
               value={numberAllowed}
-              className="cursor-pointer"
+              className="cursor-pointer bg-purple-600 text-purple-600"
               onChange={(e) => setNumberAllowed((prev) => !prev)}
             />
             <label htmlFor="numberAllowed" className="text-white">
@@ -89,7 +89,7 @@ function App() {
               type="checkbox"
               id="symbolAllowed"
               value={symbolAllowed}
-              className="cursor-pointer"
+              className="cursor-pointer bg-purple-600 text-purple-600"
               onChange={(e) => setSymbolAllowed((prev) => !prev)}
             />
             <label htmlFor="numberAllowed" className="text-white">
